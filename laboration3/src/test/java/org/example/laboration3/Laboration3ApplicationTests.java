@@ -8,6 +8,7 @@ class Laboration3ApplicationTests {
 
     @Test
     @DisplayName ("Hämtar produkter efter kategori/visst lagersaldo")
+
     void contextLoads() {
     }
 

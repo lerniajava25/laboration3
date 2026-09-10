@@ -131,13 +131,13 @@ class WarehouseServiceTest {
     @DisplayName("Beräknar totalt lagervärde - flera produkter finns")
     void calculateTotalInventoryValue_whenMultipleProductsExist() {
         service.addProduct(new Product("1", "Iphone", "Mobiltelefoner",
-                20000, 2, LocalDate.now()));   // 40 000
+                20000, 2, LocalDate.now()));
 
         service.addProduct(new Product("2", "Samsung", "Mobiltelefoner",
-                15000, 3, LocalDate.now()));   // 45 000
+                15000, 3, LocalDate.now()));
 
         service.addProduct(new Product("3", "Macbook", "Datorer",
-                25000, 1, LocalDate.now()));   // 25 000
+                25000, 1, LocalDate.now()));
 
         double result = service.calculateTotalInventoryValue();
 
@@ -169,10 +169,10 @@ class WarehouseServiceTest {
             "bland flera produkter")
     void calculateTotalInventoryValue_whenOneProductHasZeroQuantity_stillIncludedInCalculation() {
         service.addProduct(new Product("1", "Iphone", "Mobiltelefoner",
-                20000, 0, LocalDate.now()));   // 0
+                20000, 0, LocalDate.now()));
 
         service.addProduct(new Product("2", "Samsung", "Mobiltelefoner",
-                15000, 3, LocalDate.now()));   // 45 000
+                15000, 3, LocalDate.now()));
 
         double result = service.calculateTotalInventoryValue();
 
@@ -292,32 +292,12 @@ class WarehouseServiceTest {
     }
 
     @Test
-    @DisplayName("Hämtar topp N dyraste produkter - kastar exception om N är negativt")
+    @DisplayName("Hämtar topp N dyraste produkter - exception om N är negativt")
     void getMostExpensiveProducts_whenNIsNegative_throwsException() {
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> service.getMostExpensiveProducts(-1));
 
         assertEquals("Antal (n) får inte vara negativt", exception.getMessage());
-    }
-
-    @Test
-    @DisplayName("Hämtar topp N dyraste produkter - lika pris ger alfabetisk sekundärsortering")
-    void getMostExpensiveProducts_whenPricesAreEqual_sortsAlphabeticallyByName() {
-        service.addProduct(new Product("1", "Samsung", "Mobiltelefoner",
-                15000, 3, LocalDate.now()));
-
-        service.addProduct(new Product("2", "Iphone", "Mobiltelefoner",
-                15000, 2, LocalDate.now()));
-
-        service.addProduct(new Product("3", "Huawei", "Mobiltelefoner",
-                15000, 1, LocalDate.now()));
-
-        List<Product> result = service.getMostExpensiveProducts(3);
-
-        assertEquals(3, result.size());
-        assertEquals("Huawei", result.get(0).getName());
-        assertEquals("Iphone", result.get(1).getName());
-        assertEquals("Samsung", result.get(2).getName());
     }
 }

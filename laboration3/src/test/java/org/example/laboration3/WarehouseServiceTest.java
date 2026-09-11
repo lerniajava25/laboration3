@@ -47,7 +47,7 @@ class WarehouseServiceTest {
         List<Product> result = service.getProductsByCategory("Mobiltelefoner");
 
         assertEquals(1, result.size());
-        assertEquals("Potatis", result.get(2).getName());
+        assertEquals("Iphone", result.get(0).getName());
     }
 
     @Test

@@ -1,12 +1,16 @@
 package org.example.laboration3;
 
+import org.example.laboration3.domain.Product;
+import org.example.laboration3.service.WarehouseService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+
 
 /* Testar följande:
 - Sök & Filtrera - getProductsByCategory()
@@ -43,7 +47,7 @@ class WarehouseServiceTest {
         List<Product> result = service.getProductsByCategory("Mobiltelefoner");
 
         assertEquals(1, result.size());
-        assertEquals("Iphone", result.get(0).getName());
+        assertEquals("Potatis", result.get(2).getName());
     }
 
     @Test

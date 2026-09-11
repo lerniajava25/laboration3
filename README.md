@@ -1,7 +1,12 @@
 # laboration3
 Laborationsuppgift 3 går ut på att jobba med enhets tester (Unit testing) samt Java 8 streams och funktionell programmering i en Spring Boot applikation.
 
+## Hur Spring Boot underlättar utvecklingen
+Spring Boot gör det mycket lättare att komma igång med ett Spring-baserat projekt, något som annars är ganska komplicerat. Detta eftersom att en stor del av konfigurationen redan är färdig och mycket grundläggande funktionalitet redan finns.
 
+Spring Boot använder även en tydlig struktur, vilket gör det att underhålla och bygga på projekt. Det är väletablerat och man har däför tillgång till en mängd bibliotek och ramverk. Precis som Java finns det även mycket dokumentation och många lösningar på problem att hitta.
+
+## Spring Boot vs Node.js
 Node.js och Spring Boot har viss överlappande funktionalitet som att skapa REST-api:er och hantera databaser.
 
 Om man jämför Spring Boot med Node.js skulle jag säga att den stora skillnaden är att Node är mycket lättare att komma igång med och få ihop enklare projekt med. Ännu mer så eftersom JavaScript lättare att komma igång med än Java.

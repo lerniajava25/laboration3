@@ -2,7 +2,15 @@
 Laborationsuppgift 3 går ut på att jobba med enhets tester (Unit testing) samt Java 8 streams och funktionell programmering i en Spring Boot applikation.
 
 
-Skillnader:
+Node.js och Spring Boot har viss överlappande funktionalitet som att skapa REST-api:er och hantera databaser.
+
+Om man jämför Spring Boot med Node.js skulle jag säga att den stora skillnaden är att Node är mycket lättare att komma igång med och få ihop enklare projekt med. Ännu mer så eftersom JavaScript lättare att komma igång med än Java.
+
+Spring Boot verkar dock ha mycket mer funktionalitet och skalbarhet, och är därför mer lämpligt på ett störe projekt med mer komplexitet.
+
+En annan viktig skillnad är att Java är statisk typat, medan JavaScript är dynamisk, därför upptäcks många typfel i Java redan när projektet kompileras. I Node.js upptäcks vissa fel först när programmet körs, om man inte använder TypeScript.
+
+Fler skillnader:
 Java/Spring Boot: Maven projekt: pom.xml - Node.js: npm, package.json.
 Concurrency - Java-trådar/virtuella trådar VS node.js/express Event loop + asynkron I/O
 REST API - Spring Boot: Controllers, annotations - Node.js: Routes/callbacks
